@@ -8,9 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Space Grotesk', sans-serif; }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
         /* Keep your custom background class */
-        .bg-background-dark { background-color: #151022; }
+        .bg-background-dark {
+            background-color: #151022;
+        }
     </style>
 </head>
 
@@ -27,7 +32,9 @@
                     <li><a href="#" class="hover:text-purple-400 transition">Home</a></li>
                     <li><a href="#" class="hover:text-purple-400 transition">Guide</a></li>
                     <li><a href="#" class="hover:text-purple-400 transition">Market</a></li>
-                    <li><a href="#" class="bg-red-500 hover:bg-red-600 rounded-lg w-20 h-9 text-gray-50  flex items-center justify-center  ">Play</a></li>
+                    <li><a href="#"
+                            class="bg-red-500 hover:bg-red-600 rounded-lg w-20 h-9 text-gray-50  flex items-center justify-center  ">Play</a>
+                    </li>
                     <li><a href="#" class="hover:text-purple-400 transition">My Deck</a></li>
                     <li><a href="#" class="hover:text-purple-400 transition">Favorites</a></li>
                 </ul>
@@ -36,7 +43,23 @@
     </header>
 
     <main class="pt-32">
-        <!-- Keep your main empty as requested -->
+
+        <section class="py-12 px-4 sm:px-10">
+            <div class="max-w-7xl mx-auto text-center  flex min-h-[60vh] flex-col items-center justify-center gap-6 ">
+                <img src="images/bg image.png" alt="" class="absolute z-[-1] brightness-[.5]">
+           
+                <h1 class="text-4xl sm:text-5xl font-bold">Forge Your Legend. Command the Elements.</h1>
+                <p class="text-gray-300">Dive into a world of myth and magic. Collect powerful cards and challenge<br>
+                    opponents.</p>
+                <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded font-bold"><span>Commencez
+                        votre collection</span></button>
+            </div>
+
+
+        </section>
+
+        
+
     </main>
 
     <footer class="bg-gray-950 border-t   border-gray-800 py-12 px-4 sm:px-10 mt-16  ">
@@ -46,7 +69,7 @@
 
                 <div class="md:col-span-1">
                     <a href="/" class="flex items-center gap-3 mb-4">
-                        
+
                         <span class="font-bold text-xl">Beasts & Battles</span>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed">
