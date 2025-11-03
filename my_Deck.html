@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .bg-background-dark {
+            background-color: #151022;
+        }
+    </style>
+</head>b
+
+<body class="bg-background-dark font-display text-white">
+
+    <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800  hidden md:flex">
+        <nav class="max-w-7xl mx-auto grid grid-cols-2 items-center px-4 sm:px-8 py-4">
+            <div>
+                <img class="rounded-full w-16 h-16 md:w-20 md:h-20  object-cover" src="images/logogame.png" alt="Logo">
+            </div>
+
+            <div class="hidden md:block">
+                <ul class="list-none flex justify-center space-x-6 sm:space-x-9 py-5 text-sm font-medium">
+                    <li><a href="#" class="hover:text-purple-400 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-purple-400 transition">Guide</a></li>
+                    <li><a href="#" class="hover:text-purple-400 transition">Market</a></li>
+                    <li><a href="#"
+                            class="bg-red-500 hover:bg-red-600 rounded-lg w-20 h-9 text-gray-50  flex items-center justify-center relative bottom-2 ">Play</a>
+                    </li>
+                    <li><a href="#" class="hover:text-purple-400 transition">My Deck</a></li>
+                    <li><a href="#" class="hover:text-purple-400 transition">Favorites</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile-menu-button"
+                class="md:hidden text-white p-2 border border-gray-700 rounded hover:bg-gray-800">
+                <span class="text-xl">☰</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-32">
+
+        <section>
+
+
+            <div class="grid gap-6 p-16  pl-56">
+                <div>
+                    <strong class="class= text-4xl text-white">My Deck</strong>
+                </div>
+                <div class=" flex gap-2">
+                    <button class="bg-blue-600 rounded-md w-12 h-7 ">All</button>
+                    <button class="bg-[#221b3d]  rounded-md w-20 h-7 ">Common</button>
+                    <button class="bg-[#221b3d]  rounded-md w-16 h-7 ">Rare</button>
+                    <button class="bg-[#221b3d]  rounded-md w-16 h-7 ">Epic</button>
+                    <button class="bg-[#221b3d]  rounded-md w-24 h-7 ">Legendary</button>
+                    <button class="bg-[#221b3d]  rounded-md w-20  h-7">Mythic</button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <footer class="bg-gray-950 border-t   border-gray-800 py-12 px-4 sm:px-10 mt-16  ">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 ">
+
+                <div class="md:col-span-1">
+                    <a href="/" class="flex items-center gap-3 mb-4">
+
+                        <span class="font-bold text-xl">Beasts & Battles</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Collect legendary cards, master the elements, and forge your destiny in the ultimate fantasy
+                        card battle.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-white mb-4">Game</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Play Now</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Marketplace</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">My Deck</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Leaderboards</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-white mb-4">Learn</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Beginner Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Card Rules</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Patch Notes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-white mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Report Bug</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
