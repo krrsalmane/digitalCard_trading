@@ -17,9 +17,10 @@
         }
     </style>
 </head>
-<body   class="bg-background-dark font-display text-white">
 
-     <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800  hidden md:flex">
+<body class="bg-background-dark font-display text-white">
+
+    <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800  hidden md:flex">
         <nav class="max-w-7xl mx-auto grid grid-cols-2 items-center px-4 sm:px-8 py-4">
             <div>
                 <img class="rounded-full w-16 h-16 md:w-20 md:h-20  object-cover" src="images/logogame.png" alt="Logo">
@@ -45,12 +46,77 @@
         </nav>
     </header>
 
-    <main class="pt-32">
+    <main class="pt-32 flex justify-center">
+        <section class="bg-[#1a1633] text-white p-6 rounded-xl w-[370px] sm:w-[450px] md:w-[500px]">
 
-        
+            <h1 class="text-2xl font-semibold mb-6">Your Hoard</h1>
+
+            <div class="flex items-center justify-between bg-[#221b3d] p-4 rounded-lg mb-3">
+                <img src="images/dragonfire.png" alt="Fire Dragon Card" class="w-14 h-14 rounded object-cover">
+                <div class="flex flex-col flex-grow px-3">
+                    <h3 class="text-sm font-semibold">Fire Dragon Card</h3>
+                    <p class="text-gray-400 text-xs">$150</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button
+                        class="bg-[#2a254d] rounded-full w-6 h-6 flex items-center justify-center text-sm">-</button>
+                    <span class="text-sm">1</span>
+                    <button
+                        class="bg-[#2a254d] rounded-full w-6 h-6 flex items-center justify-center text-sm">+</button>
+                </div>
+                <button class="ml-4 text-gray-400 hover:text-red-400 text-lg">✕</button>
+            </div>
+
+            <div class="flex items-center justify-between bg-[#221b3d] p-4 rounded-lg mb-3">
+                <img src="images/angel.png" alt="Celestial Guardian" class="w-14 h-14 rounded object-cover">
+                <div class="flex flex-col flex-grow px-3">
+                    <h3 class="text-sm font-semibold">Ice Golem Card</h3>
+                    <p class="text-gray-400 text-xs">$100</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button
+                        class="bg-[#2a254d] rounded-full w-6 h-6 flex items-center justify-center text-sm">-</button>
+                    <span class="text-sm">1</span>
+                    <button
+                        class="bg-[#2a254d] rounded-full w-6 h-6 flex items-center justify-center text-sm">+</button>
+                </div>
+                <button class="ml-4 text-gray-400 hover:text-red-400 text-lg">✕</button>
+            </div>
+
+            <div class="flex items-center justify-between bg-[#221b3d] p-4 rounded-lg mb-6">
+                <img src="images/sorsert.png" alt="Shadow Sorcerer Card" class="w-14 h-14 rounded object-cover">
+                <div class="flex flex-col flex-grow px-3">
+                    <h3 class="text-sm font-semibold">Shadow Sorcerer Card</h3>
+                    <p class="text-gray-400 text-xs">$150</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button
+                        class="bg-[#2a254d] rounded-full w-6 h-6 flex items-center justify-center text-sm">-</button>
+                    <span class="text-sm">1</span>
+                    <button
+                        class="bg-[#2a254d] rounded-full w-6 h-6 flex items-center justify-center text-sm">+</button>
+                </div>
+                <button class="ml-4 text-gray-400 hover:text-red-400 text-lg">✕</button>
+            </div>
+
+            <div class="border-t border-gray-700 pt-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-medium">Total:</span>
+                    <span class="text-2xl font-bold">$400</span>
+                </div>
+
+                <div class="flex space-x-3">
+                    <button class="bg-yellow-500 hover:bg-yellow-400 text-black font-medium rounded-lg w-1/2 py-2">Clear
+                        Cart</button>
+                    <button class="bg-red-500 hover:bg-red-600 font-medium rounded-lg w-1/2 py-2">Order Now</button>
+                </div>
+            </div>
+
+        </section>
     </main>
 
-     <footer class="bg-gray-950 border-t   border-gray-800 py-12 px-4 sm:px-10 mt-16  ">
+
+    <footer class="bg-gray-950 border-t   border-gray-800 py-12 px-4 sm:px-10 mt-16  ">
         <div class="max-w-7xl mx-auto">
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 ">
@@ -100,6 +166,7 @@
 
         </div>
     </footer>
-    
+
 </body>
+
 </html>
