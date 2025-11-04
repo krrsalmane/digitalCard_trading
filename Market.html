@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .bg-background-dark {
+            background-color: #151022;
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark font-display text-white">
+
+    <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800 hidden md:flex">
+        <nav class="max-w-7xl mx-auto grid grid-cols-2 items-center px-4 sm:px-8 py-4">
+            <div>
+                <img class="rounded-full w-16 h-16 md:w-20 md:h-20 object-cover" src="images/logogame.png" alt="Logo">
+            </div>
+
+            <div class="hidden md:block">
+                <ul class="list-none flex justify-center space-x-6 sm:space-x-9 py-5 text-sm font-medium">
+                    <li><a href="#" class="hover:text-purple-400 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-purple-400 transition">Guide</a></li>
+                    <li><a href="#" class="hover:text-purple-400 transition">Market</a></li>
+                    <li><a href="#"
+                            class="bg-red-500 hover:bg-red-600 rounded-lg w-20 h-9 text-gray-50 flex items-center justify-center relative bottom-2 ">Play</a>
+                    </li>
+                    <li><a href="#" class="hover:text-purple-400 transition">My Deck</a></li>
+                    <li><a href="#" class="hover:text-purple-400 transition">Favorites</a></li>
+                </ul>
+            </div>
+
+            <button id="mobile-menu-button"
+                class="md:hidden text-white p-2 border border-gray-700 rounded hover:bg-gray-800">
+                <span class="text-xl">☰</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto flex-1 px-4 py-8 pt-28 md:pt-32">
+        <div class="flex flex-col gap-6">
+
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button
+                    class="h-10 shrink-0 rounded-lg bg-gradient-to-r from-[#3B2818] via-[#603B13] to-[#533415] px-4  ring-1 ring-yellow-100 ">Mythic</button>
+                <button
+                    class="h-10 shrink-0 rounded-lg bg-gradient-to-r from-[#007BFF] via-[#260C42] to[#5D068A] px-4 text-sm font-medium text-mythic ring-1 ring-yellow-100 ">Epic</button>
+
+                <button
+                    class="h-10 shrink-0 rounded-lg bg-[#9400D3] px-4 text-sm font-medium text-legendary ring-1 ring-legendary/50 ">Legendary</button>
+                <button
+                    class="h-10 shrink-0 rounded-lg bg-common/20 px-4 text-sm font-medium text-common ring-1 ring-common/50 ">Common</button>
+                                    <button class="h-10 shrink-0 rounded-lg bg-[#28A745] px-4 text-sm font-medium text-mythic ring-1 ring-mythic/50 ">Rare</button>
+
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-legendary/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-legendary">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="A celestial warrior wielding a glowing spear"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDR3mc53RN2wdqVYjZqKWjVHJo4WXDzUcjTAZbkPyuF9Bk1p9Np6Z6FLBEw_qMOzq5UE2Tk31ExPfTGH-ovGdV4-cQdjTJt6mo-1kKv3QBQimXYAlXmsBxVE97_a-FDsfvGlj3OLqATc-3OrRsB4J67csmJ2njVmOL3uxl5pyX-rk5ZXbX4r69G8VUbr0p2RslvPJ2sJZ_TbdWj6G5GXHULsf06MF-FcaGn6sKrTJYv3moN8H7XcMOI4h8BMvQdkYmU2Fl99ENago");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Aetherius, Sky Weaver</p>
+                            <p class="text-sm font-normal text-legendary">Legendary 1/100</p>
+                            <p class="mt-1 text-xs text-white/60">A being of pure starlight, able to bend constellations
+                                to its will.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$99.99</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-mythic/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-mythic">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="A monstrous creature emerging from a swampy grave"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBi2YW6NL0P2awXYKyco4vXr7aMMtdFdFuS1-PeqTsbnzjVrBJamHfpcIjOK2bIaQ7oytB6VaEh5SUbfJJrOp_PfGyMxVjCi7eN5Bnfe1I0EdyngVqUe56tW2X3gGLJkcNfRGK0DJ3meUWaYY2yiI7iQZ8t2xeCQO4MIqKoqYW_TuSqg_mBzqnsSMHS_rsWsSjkm7XOlrut_OzpU2S75cnrJ8kIFns78TL21SSDUOyJDbF3EzkTeTJyJmBdWDGWjAwETrrFWHYMLP8");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Gravemaw the Devourer</p>
+                            <p class="text-sm font-normal text-mythic">Mythic 1/50</p>
+                            <p class="mt-1 text-xs text-white/60">It is said that entire worlds have vanished into its
+                                endless maw.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$149.99</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-epic/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-epic">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="An angelic knight with large, feathered wings"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5RAjHRqeUPHLEh95RSn8vM6HOK5yIn4fDiuufFxgjpyPwb7P2L5-KFdapM9MEtHzqznhuLnyc1xkLbKJVFl6pw0gF7PdAMM3p6TTWD7eJyN8VsnM997EWFuxR_U699Igqq1LvIUlQxkUieWBC4okqly-ARZ9x8Ijocr1AE8Una87p2NaIolSf0xis-Zhh6aCEmPb8tv6mFhCR1tdppc5jOM_J2BX03R7HmpG4L0SZCt_RccHnOGKr3WyL91AjoS7XNu5MfXseS80");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Celestial Guardian</p>
+                            <p class="text-sm font-normal text-epic">Epic 5/250</p>
+                            <p class="mt-1 text-xs text-white/60">An eternal sentinel sworn to protect the celestial
+                                gates.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$49.99</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-rare/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-rare">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="A cloaked assassin figure in a dark forest"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9KEqebEfdzG4ICIX8TFrLkh9vo8q_JBfekdpQHkoU_fh__nC4VhSGRMBTOStlfbl627-X-Qb0JELGiMODpX0z9VRDBPKVNqUOHh3mSTc7HKnNeUU0jfEocFKA09I-kvW2zoFaMrhBAIN2Tu_wKZ8oBBBydgTyDNDDD5z_AZlrNkuRzQMvwCwZnuyHMvLIL8FunasoCBOCpFa6pkO22kdzp0NICAyoR8POtJauIkDhLYbjexAtBMZaRCO-FHnuFDUCrXUqPVloxr0");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Shadowfen Ambusher</p>
+                            <p class="text-sm font-normal text-rare">Rare 12/500</p>
+                            <p class="mt-1 text-xs text-white/60">Strikes from the shadows with poison-tipped blades.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$19.99</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-epic/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-epic">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="A knight in golden armor holding a radiant hammer"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0QCaAf73QEXjImx_eGFjFmSC4i1p9stN_T5L1EPk0kqu2PbF3MKNodhBt4cHwxT9L0eOPLIfbkhjeA2r4X1g1aoPSe7dG1sCmRa2Tk1Qaz-akkPIn_KaWOyXuJtYQNy3ugR_CKWjPaqP5muu1OOpjiAvj0qlsdD8MPEIzmcqX3o4tFXgrKLuCX-v_pVrCPSaDhOICgKfYMfTI6KSksye3yKfLlzfwUoBYmFRmY5AUbw_hgOHa-FVTE5gSGAtW-8BdQlP49JqTfGg");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Sunstone Paladin</p>
+                            <p class="text-sm font-normal text-epic">Epic 8/250</p>
+                            <p class="mt-1 text-xs text-white/60">Wields the power of the sun to smite his foes.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$55.00</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-legendary/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-legendary">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="A mage opening a purple, swirling portal"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMsqDlKbSDtdC1fbxm6Z9d8hj9MUREdNXq_ZHkfIC1A2FeZIYZsQYuvtNZX62EGy5efHz3r1CHyuAzZbhZ6Qp1eg5O8Afm7KHlPjJPNwWEOihIy9VDkDT34iCfe-jdQ8ilKVz4TBGVCfvUzHpUQKKRnebdo1zZWzpwi_218MRU3PY84gyLG9YdY8oSpzzV4X03Ukini8aDlMdouPvIPyBgy-EIvJ38yVTq3m36Va6iUCYJJIQOcM6j6s1jNckXaAqkjgqxESppXBk");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Riftwalker Mage</p>
+                            <p class="text-sm font-normal text-legendary">Legendary 3/100</p>
+                            <p class="mt-1 text-xs text-white/60">Steps between dimensions as easily as one might walk
+                                across a room.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$89.99</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-common/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-common">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="A large, stone golem with glowing runes"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3Dy-Go3Ks2sgsQ8w8tejKAFxwuX97otNuHQd18ThrkoNxU5fR-ZIo7xJOtSy8NcFzkldQIke04MJRoARiR1XBvf-7z_uzzEC6KFQfqJDauS7czqfTiE4oxTDdQgZv0gApehm93WPcteb5nj6kFI3GJli-VkHnTlGhRsqRE3O-bjpm7GgT8oYu-mtkD6CNUcy2Hh4Hs_ogrLY1D1BuJ2PSlDlqpL_0cGpJVMCjOWPtssfCjGUg1K1lyxt6AK1O34jWs2ZTQy_Y9Es");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Ironclad Golem</p>
+                            <p class="text-sm font-normal text-common">Common 150/1000</p>
+                            <p class="mt-1 text-xs text-white/60">Animated by simple enchantment, it is a stalwart
+                                defender.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$5.99</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-rare/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-rare">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="An elven druid communing with forest spirits"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxHRJCL1k2wzI1q7-JIshfr1xuRoBZQuBpYfF20vBwQ8LxtD0QVSIVOgv57aPluYZY21iR07We-Zc0K0Rc5vXoxS5U5JEz0TvDAbmwM13aUkWNRmisNMFjH5EEdVXmiTZ2VKNzkY34bDzdMcdjXigJ-vbZ0g3jllhkQUCcq0EbALVVrEV1eOroITCIIggfyFsSEnDRvhEybN7y21YHttSPVf1ZQ_j7XUEjPubsczriDLLAfU-xncobpAQvRFUr1hEG7L67gdpxGao");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Forest Whisperer</p>
+                            <p class="text-sm font-normal text-rare">Rare 25/500</p>
+                            <p class="mt-1 text-xs text-white/60">Can hear the ancient secrets carried on the wind.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$22.50</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col gap-4 rounded-xl border border-common/50 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-common">
+                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover"
+                        data-alt="A small, mischievous goblin holding a lit firecracker"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLOaTrOB9nyjo9O1UpJd90i_v_KD7G3y2Muwt9u68-um5jlaCOYgXzfqXz50oMR9cc3mgC0M9KyB5ur6NkCd3S3T8IMGePshC7FcSz4X08m6390b7Mg3D1G77FwICxXgBfayIIApUfC0LNXf4tWi9zjRyYLUxzvjFKf8Y9nMkAVJT4Hd7qaGZHc4xQXkhJRH66KSLT2ANSXCFQRqGbUnySpQrXuWm_7T5PUeSn5AbFbCN09EtxLCaAn03_T8N7CwjKUyIpZG0h7kE");'>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div>
+                            <p class="text-lg font-bold text-white">Goblin Spark-Flinger</p>
+                            <p class="text-sm font-normal text-common">Common 200/1000</p>
+                            <p class="mt-1 text-xs text-white/60">Loves anything that goes 'boom'. Usually from a safe
+                                distance.</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xl font-bold text-white">$4.50</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
+                                        class="material-symbols-outlined text-xl">favorite</span></button>
+                                <button
+                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
+                                    to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    <footer class="bg-gray-950 border-t border-gray-800 py-12 px-4 sm:px-10 mt-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 ">
+                <div class="md:col-span-1">
+                    <a href="/" class="flex items-center gap-3 mb-4"><span class="font-bold text-xl">Beasts &
+                            Battles</span></a>
+                    <p class="text-gray-400 text-sm leading-relaxed">Collect legendary cards, master the elements, and
+                        forge your destiny in the ultimate fantasy card battle.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Game</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Play Now</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Marketplace</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">My Deck</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Leaderboards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Learn</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Beginner Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Card Rules</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Patch Notes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Report Bug</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
