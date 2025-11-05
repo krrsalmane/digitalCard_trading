@@ -28,14 +28,14 @@
 
             <div class="hidden md:block">
                 <ul class="list-none flex justify-center space-x-6 sm:space-x-9 py-5 text-sm font-medium">
-                    <li><a href="#" class="hover:text-purple-400 transition">Home</a></li>
-                    <li><a href="#" class="hover:text-purple-400 transition">Guide</a></li>
-                    <li><a href="#" class="hover:text-purple-400 transition">Market</a></li>
-                    <li><a href="#"
+                    <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+                    <li><a href="Guide.html" class="hover:text-purple-400 transition">Guide</a></li>
+                    <li><a href="Market.html" class="hover:text-purple-400 transition">Market</a></li>
+                    <li><a href="Panier.html"
                             class="bg-red-500 hover:bg-red-600 rounded-lg w-20 h-9 text-gray-50 flex items-center justify-center relative bottom-2 ">Play</a>
                     </li>
-                    <li><a href="#" class="hover:text-purple-400 transition">My Deck</a></li>
-                    <li><a href="#" class="hover:text-purple-400 transition">Favorites</a></li>
+                    <li><a href="my_Deck.html" class="hover:text-purple-400 transition">My Deck</a></li>
+                    <li><a href="favorites.html" class="hover:text-purple-400 transition">Favorites</a></li>
                 </ul>
             </div>
 
@@ -46,281 +46,35 @@
         </nav>
     </header>
 
-    <main class="container mx-auto flex-1 px-4 py-8 pt-28 md:pt-32">
-        <div class="flex flex-col gap-6">
+   <main class="container mx-auto flex-1 px-4 py-8 pt-28 md:pt-32">
+    <div class="flex flex-col gap-6">
 
-            <div class="flex flex-wrap items-center justify-center gap-3">
-                <button
-                    class="h-10 shrink-0 rounded-lg bg-gradient-to-r from-[#3B2818] via-[#603B13] to-[#533415] px-4  ring-1 ring-yellow-100 ">Mythic</button>
-                <button
-                    class="h-10 shrink-0 rounded-lg bg-gradient-to-r from-[#007BFF] via-[#260C42] to[#5D068A] px-4 text-sm font-medium text-mythic ring-1 ring-yellow-100 ">Epic</button>
-
-                <button
-                    class="h-10 shrink-0 rounded-lg bg-[#9400D3] px-4 text-sm font-medium text-legendary ring-1 ring-legendary/50 ">Legendary</button>
-                <button
-                    class="h-10 shrink-0 rounded-lg bg-gray-500 px-4 text-sm font-medium text-common ring-1 ring-common/50 ">Common</button>
-                <button
-                    class="h-10 shrink-0 rounded-lg bg-[#28A745] px-4 text-sm font-medium text-mythic ring-1 ring-mythic/50 ">Rare</button>
-
-            </div>
-
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-purple-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-legendary">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/sky.png" alt="">
-                    </div>
-
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Aetherius, Sky Weaver</p>
-                            <p class="text-sm font-normal text-purple-400">Legendary 1/100</p>
-                            <p class="mt-1 text-xs text-white/50">A being of pure starlight, able to bend constellations
-                                to its will.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$99.99</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-yellow-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-mythic">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/graveman.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Gravemaw the Devourer</p>
-                            <p class="text-sm font-normal text-yellow-400">Mythic 1/50</p>
-                            <p class="mt-1 text-xs text-white/50">It is said that entire worlds have vanished into its
-                                endless maw.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$149.99</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-[#007BFF] bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-epic">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/angel.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Celestial Guardian</p>
-                            <p class="text-sm font-normal text-blue-200">Epic 5/250</p>
-                            <p class="mt-1 text-xs text-white/50">An eternal sentinel sworn to protect the celestial
-                                gates.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$49.99</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-green-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-rare">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/shadowman.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Shadowfen Ambusher</p>
-                            <p class="text-sm font-normal text-green-300">Rare 12/500</p>
-                            <p class="mt-1 text-xs text-white/50">Strikes from the shadows with poison-tipped blades.
-                            </p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$19.99</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-yellow-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-epic">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/hammer.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Sunstone Paladin</p>
-                            <p class="text-sm font-normal text-blue-200">Epic 8/250</p>
-                            <p class="mt-1 text-xs text-white/50">Wields the power of the sun to smite his foes.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$55.00</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-purple-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-legendary">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/rifwalker.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Riftwalker Mage</p>
-                            <p class="text-sm font-normal text-purple-400">Legendary 3/100</p>
-                            <p class="mt-1 text-xs text-white/50">Steps between dimensions as easily as one might walk
-                                across a room.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$89.99</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-gray-500 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-common">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/ironclad.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Ironclad Golem</p>
-                            <p class="text-sm font-normal text-gray-400">Common 150/1000</p>
-                            <p class="mt-1 text-xs text-white/50">Animated by simple enchantment, it is a stalwart
-                                defender.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$5.99</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-green-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-rare">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/forestwhisper.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Forest Whisperer</p>
-                            <p class="text-sm font-normal text-green-200">Rare 25/500</p>
-                            <p class="mt-1 text-xs text-white/50">Can hear the ancient secrets carried on the wind.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$22.50</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="flex flex-col gap-4 rounded-xl border border-gray-500 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2 hover:card-glow-common">
-                    <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
-
-                        <img src="images/goblin.png" alt="">
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div>
-                            <p class="text-lg font-bold text-white">Goblin Spark-Flinger</p>
-                            <p class="text-sm font-normal text-gray-400">Common 200/1000</p>
-                            <p class="mt-1 text-xs text-white/50">Loves anything that goes 'boom'. Usually from a safe
-                                distance.</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xl font-bold text-white">$4.50</p>
-                            <div class="flex items-center gap-2">
-                                <button
-                                    class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-cta transition-colors hover:bg-cta hover:text-white"><span
-                                        class="material-symbols-outlined text-xl"><img src="images/Favirte icon.png"
-                                            alt=""></span></button>
-                                <button
-                                    class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white transition-opacity hover:opacity-80">Add
-                                    to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            <button
+                class="h-10 shrink-0 rounded-lg bg-blue-600 px-4 ring-1 ring-blue-300 rarity-filter-btn" 
+                data-rarity="All">All</button>
+            <button
+                class="h-10 shrink-0 rounded-lg bg-gradient-to-r from-[#3B2818] via-[#603B13] to-[#533415] px-4 ring-1 ring-yellow-100 rarity-filter-btn"
+                data-rarity="Mythic">Mythic</button>
+            <button
+                class="h-10 shrink-0 rounded-lg bg-gradient-to-r from-[#007BFF] via-[#260C42] to[#5D068A] px-4 text-sm font-medium text-mythic ring-1 ring-yellow-100 rarity-filter-btn"
+                data-rarity="Epic">Epic</button>
+            <button
+                class="h-10 shrink-0 rounded-lg bg-[#9400D3] px-4 text-sm font-medium text-legendary ring-1 ring-legendary/50 rarity-filter-btn"
+                data-rarity="Legendary">Legendary</button>
+            <button
+                class="h-10 shrink-0 rounded-lg bg-[#28A745] px-4 text-sm font-medium text-mythic ring-1 ring-mythic/50 rarity-filter-btn"
+                data-rarity="Rare">Rare</button>
+            <button
+                class="h-10 shrink-0 rounded-lg bg-gray-500 px-4 text-sm font-medium text-common ring-1 ring-common/50 rarity-filter-btn"
+                data-rarity="Common">Common</button>
         </div>
-    </main>
+
+        <div id="market-cards-container" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+            </div>
+        
+    </div>
+</main>
     <footer class="bg-gray-950 border-t border-gray-800 py-12 px-4 sm:px-10 mt-16">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 ">
@@ -360,7 +114,7 @@
             </div>
         </div>
     </footer>
-
+<script src="js/app.js"></script>
 </body>
 
 </html>
