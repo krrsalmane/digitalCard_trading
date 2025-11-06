@@ -66,7 +66,7 @@
 
     <main class="pt-32 space-y-10">
 
-        <!-- Section 1: Welcome / Tutorial -->
+
         <section class="flex flex-col items-center space-y-6 px-4 md:px-0">
             <img src="images/guidesection photo.png" class="w-full md:w-8/12 mx-auto rounded-lg" alt="Guide Section">
             <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-4 rounded-lg text-center">
@@ -80,7 +80,6 @@
             </div>
         </section>
 
-        <!-- Section 2: Game Rules -->
         <section class="flex flex-col items-center space-y-6 px-4 md:px-0">
             <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-6 rounded-lg text-center">
                 <strong class="text-3xl md:text-4xl text-white block mb-3">Learn the Rules of the Game</strong>
@@ -94,7 +93,7 @@
             </div>
         </section>
 
-        <!-- Section 3: Card Rarity -->
+
         <section class="flex flex-col items-center space-y-4 px-4 md:px-0">
             <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-6 rounded-lg text-center">
                 <strong class="text-2xl md:text-3xl text-white block mb-2">Understanding Card Rarity</strong>
@@ -111,24 +110,59 @@
             </div>
         </section>
 
-        <!-- Section 4: FAQ -->
+
         <section class="flex flex-col items-center space-y-4 px-4 md:px-0">
             <div class="w-full md:w-7/12 text-center">
                 <strong class="text-3xl md:text-4xl text-white block mb-6">Frequently Asked Questions</strong>
             </div>
+
             <div class="w-full md:w-7/12 flex flex-col space-y-2">
-                <div class="flex justify-between items-center bg-gray-950/90 px-4 py-4 rounded-lg">
-                    <p>How do I build a deck?</p>
-                    <img src="images/plus-sign.png" class="w-6" alt="Expand FAQ">
-                </div>
-                <div class="flex justify-between items-center bg-gray-950/90 px-4 py-4 rounded-lg">
-                    <p>What are the different game modes?</p>
-                    <img src="images/plus-sign.png" class="w-6" alt="Expand FAQ">
-                </div>
-                <div class="flex justify-between items-center bg-gray-950/90 px-4 py-4 rounded-lg">
-                    <p>How does the marketplace work?</p>
-                    <img src="images/plus-sign.png" class="w-6" alt="Expand FAQ">
-                </div>
+
+                <!-- FAQ Item 1 -->
+                <details class="bg-gray-950/90 rounded-lg px-4 py-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none text-white">
+                        How do I build a deck?
+                        <span class="transition-transform duration-300 ease-in-out">&#43;</span>
+                    </summary>
+                    <p class="mt-2 text-purple-300 text-sm">
+                        To build a deck, select cards from your collection and arrange them strategically according to
+                        their abilities.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="bg-gray-950/90 rounded-lg px-4 py-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none text-white">
+                        What are the different game modes?
+                        <span class="transition-transform duration-300 ease-in-out">&#43;</span>
+                    </summary>
+                    <p class="mt-2 text-purple-300 text-sm">
+                        The game features multiple modes including Campaign, PvP battles, and special seasonal events.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="bg-gray-950/90 rounded-lg px-4 py-4">
+                    <summary class="flex justify-between items-center cursor-pointer list-none text-white">
+                        How does the marketplace work?
+                        <span class="transition-transform duration-300 ease-in-out">&#43;</span>
+                    </summary>
+                    <p class="mt-2 text-purple-300 text-sm">
+                        In the marketplace, you can buy, sell, or trade cards with other players. Prices depend on card
+                        rarity and demand.
+                    </p>
+                </details>
+
+            </div>
+        </section>
+
+        <style>
+            /* Rotate the plus sign when the <details> is open */
+            details[open] summary span {
+                transform: rotate(45deg);
+                display: inline-block;
+            }
+        </style>
 
 
     </main>
