@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier</title>
+    <title>My Deck</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -16,134 +16,86 @@
             background-color: #151022;
         }
     </style>
-</head>b
+</head>
 
 <body class="bg-background-dark font-display text-white">
 
-    <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800  hidden md:flex">
-        <nav class="max-w-7xl mx-auto grid grid-cols-2 items-center px-4 sm:px-8 py-4">
-            <div>
-                <img class="rounded-full w-16 h-16 md:w-20 md:h-20  object-cover" src="images/logogame.png" alt="Logo">
-            </div>
-
-            <div class="hidden md:block">
-                <ul class="list-none flex justify-center space-x-6 sm:space-x-9 py-5 text-sm font-medium">
-                    <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
-                    <li><a href="Guide.html" class="hover:text-purple-400 transition">Guide</a></li>
-                    <li><a href="Market.html" class="hover:text-purple-400 transition">Market</a></li>
-                    <li><a href="Panier.html"
-                            class="bg-red-500 hover:bg-red-600 rounded-lg w-20 h-9 text-gray-50  flex items-center justify-center relative bottom-2 ">Play</a>
-                    </li>
-                    <li><a href="my_Deck.html" class="hover:text-purple-400 transition">My Deck</a></li>
-                    <li><a href="favorites.html" class="hover:text-purple-400 transition">Favorites</a></li>
-                </ul>
+    <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4">
+            <div class="flex items-center">
+                <img class="rounded-full w-16 h-16 md:w-20 md:h-20 object-cover" src="images/logogame.png" alt="Logo">
             </div>
 
             <button id="mobile-menu-button"
-                class="md:hidden text-white p-2 border border-gray-700 rounded hover:bg-gray-800">
+                class="md:hidden text-white p-2 border border-gray-700 rounded hover:bg-gray-800 z-50">
                 <span class="text-xl">☰</span>
             </button>
+
+            <div id="mobile-menu"
+                class="hidden md:block absolute md:static top-20 left-0 right-0 w-full bg-gray-950 md:bg-transparent shadow-lg md:shadow-none p-4 md:p-0">
+
+                <ul
+                    class="list-none flex flex-col md:flex-row md:items-center justify-center space-y-2 md:space-y-0 md:space-x-6 sm:space-x-9 text-sm font-medium w-full">
+
+                    <li class="w-full md:w-auto"><a href="index.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Home</a></li>
+                    <li class="w-full md:w-auto"><a href="Guide.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Guide</a></li>
+                    <li class="w-full md:w-auto"><a href="Market.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Market</a></li>
+     <li class="w-full md:w-auto">
+                        <a href="Panier.html"
+                            class="inline-flex items-center justify-center gap-2 rounded-lg bg-rose-600 px-4 py-3 text-base font-medium text-white transition-all duration-200 active:scale-98 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 focus:ring-offset-black min-h-12 w-full md:w-auto mx-auto md:mx-0">
+
+                            <span class="flex-shrink-0">Card</span>
+
+                            <span id="cart-counter"
+                                class="flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full bg-amber-400 px-1.5 text-xs font-bold text-black">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="w-full md:w-auto"><a href="my_Deck.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">My Deck</a></li>
+                    <li class="w-full md:w-auto"><a href="favorites.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Favorites</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main class="pt-32">
-
+    <main class="pt-32 container mx-auto px-4">
         <section>
-
-
-            <div class="grid gap-6 p-6  pl-56">
+            <div class="grid gap-6 p-6">
                 <div>
-                    <strong class="class= text-4xl text-white">My Deck</strong>
-                </div>
-                <div class=" flex gap-2">
-                    <button class="bg-blue-600 rounded-md w-12 h-7 ">All</button>
-                    <button class="bg-[#221b3d]  rounded-md w-20 h-7 ">Common</button>
-                    <button class="bg-[#221b3d]  rounded-md w-16 h-7 ">Rare</button>
-                    <button class="bg-[#221b3d]  rounded-md w-16 h-7 ">Epic</button>
-                    <button class="bg-[#221b3d]  rounded-md w-24 h-7 ">Legendary</button>
-                    <button class="bg-[#221b3d]  rounded-md w-20  h-7">Mythic</button>
-
+                    <strong class="text-4xl text-white">My Deck</strong>
                 </div>
 
+                <div class="flex flex-wrap gap-2">
+                    <button class="bg-blue-600 rounded-md w-12 h-7 deck-rarity-filter-btn"
+                        data-rarity="All">All</button>
+                    <button class="bg-[#221b3d] rounded-md w-20 h-7 deck-rarity-filter-btn"
+                        data-rarity="Common">Common</button>
+                    <button class="bg-[#221b3d] rounded-md w-16 h-7 deck-rarity-filter-btn"
+                        data-rarity="Rare">Rare</button>
+                    <button class="bg-[#221b3d] rounded-md w-16 h-7 deck-rarity-filter-btn"
+                        data-rarity="Epic">Epic</button>
+                    <button class="bg-[#221b3d] rounded-md w-24 h-7 deck-rarity-filter-btn"
+                        data-rarity="Legendary">Legendary</button>
+                    <button class="bg-[#221b3d] rounded-md w-20 h-7 deck-rarity-filter-btn"
+                        data-rarity="Mythic">Mythic</button>
+                </div>
             </div>
 
-            <div>
-                <div class="w-64 h-96 relative overflow-hidden rounded-lg shadow-2xl ml-56">
-                    <img src="images/Spirit.png" alt="Whispering Spirit Card Image" class="w-full h-full object-cover">
-
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-
-                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <strong class="text-2xl font-extrabold block">Whispering Spirit</strong>
-                        <p class="text-md text-gray-300 mt-1">Common</p>
-                       
-                    </div>
-                </div>
-
-
-
-
-
-
+            <div id="deck-cards-container"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
             </div>
         </section>
-
-
     </main>
 
-
-    <footer class="bg-gray-950 border-t   border-gray-800 py-12 px-4 sm:px-10 mt-16  ">
-        <div class="max-w-7xl mx-auto">
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 ">
-
-                <div class="md:col-span-1">
-                    <a href="/" class="flex items-center gap-3 mb-4">
-
-                        <span class="font-bold text-xl">Beasts & Battles</span>
-                    </a>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Collect legendary cards, master the elements, and forge your destiny in the ultimate fantasy
-                        card battle.
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-white mb-4">Game</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Play Now</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Marketplace</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">My Deck</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Leaderboards</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-white mb-4">Learn</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Beginner Guide</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Card Rules</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Patch Notes</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-white mb-4">Support</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Report Bug</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
+    <footer class="bg-gray-950 border-t border-gray-800 py-12 px-4 sm:px-10 mt-16">
     </footer>
-<script src="js/app.js"></script>
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>

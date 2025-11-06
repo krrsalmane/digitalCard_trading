@@ -19,108 +19,120 @@
 </head>
 
 <body class="bg-background-dark font-display text-white">
-
-    <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800  hidden md:flex">
-        <nav class="max-w-7xl mx-auto grid grid-cols-2 items-center px-4 sm:px-8 py-4">
-            <div>
-                <img class="rounded-full w-16 h-16 md:w-20 md:h-20  object-cover" src="images/logogame.png" alt="Logo">
-            </div>
-
-            <div class="hidden md:block">
-                <ul class="list-none flex justify-center space-x-6 sm:space-x-9 py-5 text-sm font-medium">
-                    <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
-                    <li><a href="Guide.html" class="hover:text-purple-400 transition">Guide</a></li>
-                    <li><a href="Market.html" class="hover:text-purple-400 transition">Market</a></li>
-                    <li><a href="Panier.html"
-                            class="bg-red-500 hover:bg-red-600 rounded-lg w-20 h-9 text-gray-50  flex items-center justify-center relative bottom-2 ">Play</a>
-                    </li>
-                    <li><a href="my_Deck.html" class="hover:text-purple-400 transition">My Deck</a></li>
-                    <li><a href="favorites.html" class="hover:text-purple-400 transition">Favorites</a></li>
-                </ul>
+    <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4">
+            <div class="flex items-center">
+                <img class="rounded-full w-16 h-16 md:w-20 md:h-20 object-cover" src="images/logogame.png" alt="Logo">
             </div>
 
             <button id="mobile-menu-button"
-                class="md:hidden text-white p-2 border border-gray-700 rounded hover:bg-gray-800">
+                class="md:hidden text-white p-2 border border-gray-700 rounded hover:bg-gray-800 z-50">
                 <span class="text-xl">☰</span>
             </button>
+
+            <div id="mobile-menu"
+                class="hidden md:block absolute md:static top-20 left-0 right-0 w-full bg-gray-950 md:bg-transparent shadow-lg md:shadow-none p-4 md:p-0">
+
+                <ul
+                    class="list-none flex flex-col md:flex-row md:items-center justify-center space-y-2 md:space-y-0 md:space-x-6 sm:space-x-9 text-sm font-medium w-full">
+
+                    <li class="w-full md:w-auto"><a href="index.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Home</a></li>
+                    <li class="w-full md:w-auto"><a href="Guide.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Guide</a></li>
+                    <li class="w-full md:w-auto"><a href="Market.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Market</a></li>
+
+                    <li class="w-full md:w-auto">
+                        <a href="Panier.html"
+                            class="inline-flex items-center justify-center gap-2 rounded-lg bg-rose-600 px-4 py-3 text-base font-medium text-white transition-all duration-200 active:scale-98 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 focus:ring-offset-black min-h-12 w-full md:w-auto mx-auto md:mx-0">
+
+                            <span class="flex-shrink-0">Card</span>
+
+                            <span id="cart-counter"
+                                class="flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full bg-amber-400 px-1.5 text-xs font-bold text-black">
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="w-full md:w-auto"><a href="my_Deck.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">My Deck</a></li>
+                    <li class="w-full md:w-auto"><a href="favorites.html"
+                            class="block w-full px-4 py-2 hover:text-purple-400 transition">Favorites</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main class="pt-32">
+    <main class="pt-32 space-y-10">
 
-        <section>
-            <div class="place-items-center    ">
-                <div class="place-items-center">
-                    <img src="images/guidesection photo.png" alt="">
+        <!-- Section 1: Welcome / Tutorial -->
+        <section class="flex flex-col items-center space-y-6 px-4 md:px-0">
+            <img src="images/guidesection photo.png" class="w-full md:w-8/12 mx-auto rounded-lg" alt="Guide Section">
+            <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-4 rounded-lg text-center">
+                <strong class="text-xl md:text-2xl text-white block mb-2">Welcome, Adventurer! Master the
+                    Basics.</strong>
+                <p class="text-purple-300 text-sm mb-4">Learn the core mechanics to start your journey.</p>
+                <button
+                    class="bg-purple-600/20 hover:bg-purple-600/40 text-white text-sm py-2 rounded-lg font-medium w-full md:w-11/12 transition">
+                    Watch Tutorial
+                </button>
+            </div>
+        </section>
 
-                </div>
-                <div class=" relative bg-gray-950/90  w-7/12 ">
-                    <strong>Welcome, Adventurer! Master the Basics.</strong>
-                    <p class="text-purple-300 text-sm">Learn the core mechanics to start your journey.</p>
-                    <button
-                        class="mx-3 mb-3 mt-2 bg-purple-600/20 hover:bg-purple-600/40 text-white text-sm py-1.5 rounded-lg font-medium transition w-11/12 items-center">Watch
-                        Tutorial</button>
+        <!-- Section 2: Game Rules -->
+        <section class="flex flex-col items-center space-y-6 px-4 md:px-0">
+            <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-6 rounded-lg text-center">
+                <strong class="text-3xl md:text-4xl text-white block mb-3">Learn the Rules of the Game</strong>
+                <p class="text-purple-300 text-sm mb-4">
+                    Understand the core objective and start your adventure. Dive into the full rulebook to master every
+                    aspect of the game and forge your path to victory.
+                </p>
+                <button class="bg-cyan-400 hover:bg-purple-700 text-black px-6 py-3 rounded-xl transition">
+                    Learn the Rules of the Game
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 3: Card Rarity -->
+        <section class="flex flex-col items-center space-y-4 px-4 md:px-0">
+            <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-6 rounded-lg text-center">
+                <strong class="text-2xl md:text-3xl text-white block mb-2">Understanding Card Rarity</strong>
+                <p class="text-purple-300 text-sm mb-4">
+                    Rarity indicates a card's power and scarcity. The higher the rarity, the more unique its abilities.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="bg-yellow-300 rounded-xl px-4 py-2">Mythic</button>
+                    <button class="bg-red-500 rounded-xl px-4 py-2">Legendary</button>
+                    <button class="bg-purple-600 rounded-xl px-4 py-2">Epic</button>
+                    <button class="bg-green-500 rounded-xl px-4 py-2">Rare</button>
+                    <button class="bg-gray-500 rounded-xl px-4 py-2">Common</button>
                 </div>
             </div>
         </section>
 
-        <section>
-
-
-
-            <div class="">
-                <div
-                    class="bg-gray-950/90  w-7/12 left-72 relative mt-10  flex flex-col items-center text-center py-6 gap-6">
-                    <strong class="text-4xl text-white">Learn the Rules of the Game</strong>
-                    <p class="text-purple-300 text-sm">Understand the core objective and start your adventure. Dive into
-                        the full<br>
-                        rulebook to master every aspect of the game and forge your path to<br>
-                        victory.</p>
-                    <button class="bg-cyan-400 hover:bg-purple-700 text-black px-6 py-3 rounded-xl transition">Learn the
-                        Rules of the Game</button>
-                </div>
-
-
+        <!-- Section 4: FAQ -->
+        <section class="flex flex-col items-center space-y-4 px-4 md:px-0">
+            <div class="w-full md:w-7/12 text-center">
+                <strong class="text-3xl md:text-4xl text-white block mb-6">Frequently Asked Questions</strong>
             </div>
-
-        </section>
-
-        <section>
-
-
-            <div    class=" bg-gray-950/90 w-7/12 left-72 relative mt-5  flex flex-col items-center text-center py-6 gap-5 ">
-                <div class=" flex flex-col   gap-5 ">
-                    <strong class="text-3xl text-white">Understanding Card Rarity</strong>
-                    <p class="text-purple-300 text-sm">Rarity indicates a card's power and scarcity. The higher the
-                        rarity, the more unique its
-                        abilities.</p>
+            <div class="w-full md:w-7/12 flex flex-col space-y-2">
+                <div class="flex justify-between items-center bg-gray-950/90 px-4 py-4 rounded-lg">
+                    <p>How do I build a deck?</p>
+                    <img src="images/plus-sign.png" class="w-6" alt="Expand FAQ">
+                </div>
+                <div class="flex justify-between items-center bg-gray-950/90 px-4 py-4 rounded-lg">
+                    <p>What are the different game modes?</p>
+                    <img src="images/plus-sign.png" class="w-6" alt="Expand FAQ">
+                </div>
+                <div class="flex justify-between items-center bg-gray-950/90 px-4 py-4 rounded-lg">
+                    <p>How does the marketplace work?</p>
+                    <img src="images/plus-sign.png" class="w-6" alt="Expand FAQ">
                 </div>
 
-                <div>
-                    <button class="bg-yellow-300  rounded-xl w-20">Mythic</button> <button
-                        class="bg-red-500  rounded-xl w-24">Legendary</button> <button
-                        class="bg-purple-600  w-12 rounded-xl">Epic</button> <button
-                        class="bg-green-500 w-12 rounded-xl">Rare</button>
-                    <button class="bg-gray-500 w-20   rounded-xl">Common</button>
-                </div>
-            </div>
-        </section>
 
-        <section>
-
-            <div  class="">
-                <div class="w-7/12 left-72 relative mt-6  flex flex-col items-center text-center py-6 gap-6">
-                    <strong class="text-4xl text-white">Frequently Asked Questions</strong>
-
-                </div>
-                <div  class=" bg-gray-950/90 w-7/12 left-72 relative flex  pl-2 py-6 gap-x-96 "><p>How do I build a deck?</p> <span  class="w-8  ml-48"><img src="images/plus-sign.png"></span></div>
-                
-                <div  class=" bg-gray-950/90 w-7/12 left-72 relative mt-2  flex  pl-2  py-6 gap-x-96 "><p>What are the different game modes?</p><span  class="w-8  ml-20"><img src="images/plus-sign.png"></span></div>
-                <div  class=" bg-gray-950/90 w-7/12 left-72 relative mt-2  flex  pl-2  py-6 gap-x-96 "><p>How does the marketplace work?</p> <span  class="w-8  ml-[101px]"><img src="images/plus-sign.png"></span></div>
-            </div>
-
-        </section>
     </main>
+
     <footer class="bg-gray-950 border-t   border-gray-800 py-12 px-4 sm:px-10 mt-16  ">
         <div class="max-w-7xl mx-auto">
 
