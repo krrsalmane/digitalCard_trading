@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>BattleArena</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -19,6 +19,7 @@
 </head>
 
 <body class="bg-background-dark font-display text-white">
+
     <header class="fixed inset-x-0 top-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800">
         <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-8 py-4">
             <div class="flex items-center">
@@ -63,108 +64,17 @@
             </div>
         </nav>
     </header>
+    <main class="pt-32">
 
-    <main class="pt-32 space-y-10">
 
+        <section>
 
-        <section class="flex flex-col items-center space-y-6 px-4 md:px-0">
-            <img src="images/guidesection photo.png" class="w-full md:w-8/12 mx-auto rounded-lg" alt="Guide Section">
-            <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-4 rounded-lg text-center">
-                <strong class="text-xl md:text-2xl text-white block mb-2">Welcome, Adventurer! Master the
-                    Basics.</strong>
-                <p class="text-purple-300 text-sm mb-4">Learn the core mechanics to start your journey.</p>
-                <button
-                    class="bg-purple-600/20 hover:bg-purple-600/40 text-white text-sm py-2 rounded-lg font-medium w-full md:w-11/12 transition">
-                    Watch Tutorial
-                </button>
-            </div>
+            
         </section>
-
-        <section class="flex flex-col items-center space-y-6 px-4 md:px-0">
-            <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-6 rounded-lg text-center">
-                <strong class="text-3xl md:text-4xl text-white block mb-3">Learn the Rules of the Game</strong>
-                <p class="text-purple-300 text-sm mb-4">
-                    Understand the core objective and start your adventure. Dive into the full rulebook to master every
-                    aspect of the game and forge your path to victory.
-                </p>
-                <button class="bg-cyan-400 hover:bg-purple-700 text-black px-6 py-3 rounded-xl transition">
-                    Learn the Rules of the Game
-                </button>
-            </div>
-        </section>
-
-
-        <section class="flex flex-col items-center space-y-4 px-4 md:px-0">
-            <div class="bg-gray-950/90 w-full md:w-7/12 px-6 py-6 rounded-lg text-center">
-                <strong class="text-2xl md:text-3xl text-white block mb-2">Understanding Card Rarity</strong>
-                <p class="text-purple-300 text-sm mb-4">
-                    Rarity indicates a card's power and scarcity. The higher the rarity, the more unique its abilities.
-                </p>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <button class="bg-yellow-300 rounded-xl px-4 py-2">Mythic</button>
-                    <button class="bg-red-500 rounded-xl px-4 py-2">Legendary</button>
-                    <button class="bg-purple-600 rounded-xl px-4 py-2">Epic</button>
-                    <button class="bg-green-500 rounded-xl px-4 py-2">Rare</button>
-                    <button class="bg-gray-500 rounded-xl px-4 py-2">Common</button>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="flex flex-col items-center space-y-4 px-4 md:px-0">
-            <div class="w-full md:w-7/12 text-center">
-                <strong class="text-3xl md:text-4xl text-white block mb-6">Frequently Asked Questions</strong>
-            </div>
-
-            <div class="w-full md:w-7/12 flex flex-col space-y-2">
-
-                <!-- FAQ Item 1 -->
-                <details class="bg-gray-950/90 rounded-lg px-4 py-4">
-                    <summary class="flex justify-between items-center cursor-pointer list-none text-white">
-                        How do I build a deck?
-                        <span class="transition-transform duration-300 ease-in-out">&#43;</span>
-                    </summary>
-                    <p class="mt-2 text-purple-300 text-sm">
-                        To build a deck, select cards from your collection and arrange them strategically according to
-                        their abilities.
-                    </p>
-                </details>
-
-                <!-- FAQ Item 2 -->
-                <details class="bg-gray-950/90 rounded-lg px-4 py-4">
-                    <summary class="flex justify-between items-center cursor-pointer list-none text-white">
-                        What are the different game modes?
-                        <span class="transition-transform duration-300 ease-in-out">&#43;</span>
-                    </summary>
-                    <p class="mt-2 text-purple-300 text-sm">
-                        The game features multiple modes including Campaign, PvP battles, and special seasonal events.
-                    </p>
-                </details>
-
-                <!-- FAQ Item 3 -->
-                <details class="bg-gray-950/90 rounded-lg px-4 py-4">
-                    <summary class="flex justify-between items-center cursor-pointer list-none text-white">
-                        How does the marketplace work?
-                        <span class="transition-transform duration-300 ease-in-out">&#43;</span>
-                    </summary>
-                    <p class="mt-2 text-purple-300 text-sm">
-                        In the marketplace, you can buy, sell, or trade cards with other players. Prices depend on card
-                        rarity and demand.
-                    </p>
-                </details>
-
-            </div>
-        </section>
-
-        <style>
-            details[open] summary span {
-                transform: rotate(45deg);
-                display: inline-block;
-            }
-        </style>
-
 
     </main>
+
+
 
     <footer class="bg-gray-950 border-t   border-gray-800 py-12 px-4 sm:px-10 mt-16  ">
         <div class="max-w-7xl mx-auto">
@@ -216,7 +126,6 @@
 
         </div>
     </footer>
-    <script src="js/app.js"></script>
 </body>
 
 </html>

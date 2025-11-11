@@ -1,6 +1,3 @@
-// =======================================================
-// CORE DATA AND LOCAL STORAGE UTILITIES
-// =======================================================
 
 const CARD_DATA = [
     { id: 1, name: "Aetherius, Sky Weaver", rarity: "Legendary", price: 99.99, image: "images/sky.png", description: "A being of pure starlight, able to bend constellations to its will." },
@@ -35,7 +32,8 @@ const updateCartCount = () => {
 const getCardHTML = (card, pageType = 'market') => {
     const rarityClass = card.rarity.toLowerCase(); 
     
-    // --- MY DECK LAYOUT (Clean collection view) ---
+    // --- MY DECK LAYOUT 
+
     if (pageType === 'deck') {
         return `
             <div data-card-id="${card.id}" class="flex flex-col gap-2 rounded-xl border-4 border-${rarityClass}-400 bg-component-dark p-2 transition-transform duration-300 hover:scale-[1.02]">
@@ -339,7 +337,7 @@ const initMyDeck = () => {
         });
     });
     
-    // NOTE: Removed Resell Logic listener
+
 };
 
 
@@ -366,8 +364,6 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
-        // Toggles the 'hidden' class: If it's there, it removes it (menu appears). 
-        // If it's not there, it adds it (menu disappears).
         mobileMenu.classList.toggle('hidden');
     });
 }
