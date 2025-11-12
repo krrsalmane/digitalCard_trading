@@ -8,7 +8,13 @@ const CARD_DATA = [
     { id: 6, name: "Riftwalker Mage", rarity: "Legendary", price: 89.99, image: "images/rifwalker.png", description: "Steps between dimensions as easily as one might walk across a room." },
     { id: 7, name: "Ironclad Golem", rarity: "Common", price: 5.99, image: "images/ironclad.png", description: "Animated by simple enchantment, it is a stalwart defender." },
     { id: 8, name: "Forest Whisperer", rarity: "Rare", price: 22.50, image: "images/forestwhisper.png", description: "Can hear the ancient secrets carried on the wind." },
-    { id: 9, name: "Goblin Spark-Flinger", rarity: "Common", price: 4.50, image: "images/goblin.png", description: "Loves anything that goes 'boom'. Usually from a safe distance." }
+    { id: 9, name: "Goblin Spark-Flinger", rarity: "Common", price: 4.50, image: "images/goblin.png", description: "Loves anything that goes 'boom'. Usually from a safe distance." },
+    { id:10, name: "Sunfire Phoenix", rarity: "Mythic", price:35.5 ,image : "images/phenix.png", description: "It is said that entire worlds have vanished into its endless maw."},
+    { id:11, name: "Ancient Dragon",rarity: "Epic", price:22.3 ,image : "images/AcientDragon.png",description: "An acient dragon leaved for a long time"},
+    { id:12, name: "Ice Man",rarity: "Rare", price:72.5 , image :"images/iceman.png" ,description:"Strikes with ice man changes the weather to be colder"},
+    { id:13, name: "Super Sneak", rarity: "Mythic" ,price:45.2 , image : "images/sneak.png" , description:"It is said that entire wold hass been eaten by this sneak"},
+    { id:14, name: "White Angel", rarity:"common" ,price:71.6 , image : "images/whitewomen.png" ,description:"Loves anything to help guide people"},
+    { id:15, name: "Dark shadow", rarity:"Legendary" ,price:95 , image: "images/darkman.png" , description:"Steps between dimensions takes souls"}
 ];
 
 const getStorage = (key) => JSON.parse(localStorage.getItem(key)) || [];
