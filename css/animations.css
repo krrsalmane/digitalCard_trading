@@ -1,0 +1,45 @@
+@keyframes slide-to-hand {
+    from {
+        transform: translate(-200px, -200px) rotate(-45deg);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0) rotate(0);
+        opacity: 1;
+    }
+}
+
+.slide-to-hand {
+    animation: slide-to-hand 0.5s ease-out;
+}
+
+@keyframes slide-to-arena {
+    from {
+        transform: translate(0, 100px) scale(1.2);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+.slide-to-arena {
+    animation: slide-to-arena 0.5s ease-out;
+}
+
+@keyframes attack {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -20px) scale(1.1);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.attack-animation {
+    animation: attack 0.5s ease-in-out;
+}

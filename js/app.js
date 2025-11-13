@@ -10,8 +10,8 @@ const CARD_DATA = [
     { id: 8, name: "Forest Whisperer", rarity: "Rare", price: 22.50, image: "images/forestwhisper.png", description: "Can hear the ancient secrets carried on the wind." },
     { id: 9, name: "Goblin Spark-Flinger", rarity: "Common", price: 4.50, image: "images/goblin.png", description: "Loves anything that goes 'boom'. Usually from a safe distance." },
     { id:10, name: "Sunfire Phoenix", rarity: "Mythic", price:35.5 ,image : "images/phenix.png", description: "It is said that entire worlds have vanished into its endless maw."},
-    { id:11, name: "Ancient Dragon",rarity: "Epic", price:22.3 ,image : "images/AcientDragon.png",description: "An acient dragon leaved for a long time"},
-    { id:12, name: "Ice Man",rarity: "Rare", price:72.5 , image :"images/iceman.png" ,description:"Strikes with ice man changes the weather to be colder"},
+    { id:11, name: "Ancient Dragon", rarity: "Epic", price:22.3 ,image : "images/AcientDragon.png",description: "An acient dragon leaved for a long time"},
+    { id:12, name: "Ice Man", rarity: "Rare", price:72.5 , image :"images/iceman.png" ,description:"Strikes with ice man changes the weather to be colder"},
     { id:13, name: "Super Sneak", rarity: "Mythic" ,price:45.2 , image : "images/sneak.png" , description:"It is said that entire wold hass been eaten by this sneak"},
     { id:14, name: "White Angel", rarity:"common" ,price:71.6 , image : "images/whitewomen.png" ,description:"Loves anything to help guide people"},
     { id:15, name: "Dark shadow", rarity:"Legendary" ,price:95 , image: "images/darkman.png" , description:"Steps between dimensions takes souls"}
@@ -31,14 +31,11 @@ const updateCartCount = () => {
     }
 };
 
-// =======================================================
-// CARD RENDERING FUNCTIONS (MAP) - SIMPLIFIED TEMPLATES
-// =======================================================
 
 const getCardHTML = (card, pageType = 'market') => {
     const rarityClass = card.rarity.toLowerCase(); 
     
-    // --- MY DECK LAYOUT 
+
 
     if (pageType === 'deck') {
         return `
@@ -55,7 +52,7 @@ const getCardHTML = (card, pageType = 'market') => {
         `;
     }
 
-    // --- MARKET/FAVORITES LAYOUT ---
+  
     let actionButtons = `
         <button data-card-id="${card.id}" class="h-9 w-9 rounded-full bg-white/10 add-to-favorites-btn">❤️</button>
         <button data-card-id="${card.id}" class="h-9 rounded-full bg-[#DC143C] px-4 text-sm font-bold text-white add-to-cart-btn">Add to cart</button>
@@ -68,7 +65,7 @@ const getCardHTML = (card, pageType = 'market') => {
     }
 
     return `
-        <div data-card-id="${card.id}" class="flex flex-col gap-4 rounded-xl border border-${rarityClass}-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2">
+        <div id="card-${card.id}" class="flex flex-col gap-4 rounded-xl border border-${rarityClass}-400 bg-component-dark p-4 transition-transform duration-300 hover:-translate-y-2">
             <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
                 <img src="${card.image}" alt="${card.name}">
             </div>
@@ -93,9 +90,6 @@ const renderCards = (cards, containerId, pageType) => {
     container.innerHTML = html;
 };
 
-// =======================================================
-// STATE MODIFIERS (NO ALERTS)
-// =======================================================
 
 const addToCart = (cardId) => {
     let cart = getStorage('cart');
@@ -128,9 +122,7 @@ const removeFromFavorites = (cardId) => {
 };
 
 
-// =======================================================
-// PAGE INITIALIZATION FUNCTIONS
-// =======================================================
+
 
 const initMarket = () => {
     const containerId = 'market-cards-container';
@@ -307,8 +299,7 @@ const initCart = () => {
         setStorage('cart', []);
         renderCart();
         updateCartCount();
-        // Optional: Redirect to My Deck page to show results
-        // window.location.href = 'my_Deck.html'; 
+        
     });
 };
 
@@ -318,7 +309,6 @@ const initMyDeck = () => {
     if (!container) return;
 
     const renderDeck = (deckIds) => {
-        // FILTER: Get full card objects from the global data array
         const deckCards = CARD_DATA.filter(card => deckIds.includes(card.id));
         renderCards(deckCards, containerId, 'deck');
     };
@@ -373,3 +363,5 @@ if (mobileMenuButton && mobileMenu) {
         mobileMenu.classList.toggle('hidden');
     });
 }
+
+
