@@ -31,19 +31,15 @@ const updateCartCount = () => {
     }
 };
 
-
 const getCardHTML = (card, pageType = 'market') => {
     const rarityClass = card.rarity.toLowerCase(); 
     
-
-
     if (pageType === 'deck') {
         return `
             <div data-card-id="${card.id}" class="flex flex-col gap-2 rounded-xl border-4 border-${rarityClass}-400 bg-component-dark p-2 transition-transform duration-300 hover:scale-[1.02]">
                 <div class="w-full overflow-hidden rounded-lg bg-center bg-no-repeat aspect-[3/4] bg-cover">
                     <img src="${card.image}" alt="${card.name}">
                 </div>
-                
                 <div class="flex flex-col items-start p-1">
                     <p class="text-lg font-bold text-white">${card.name}</p>
                     <p class="text-sm font-medium text-${rarityClass}-400">${card.rarity}</p>
