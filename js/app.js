@@ -17,6 +17,17 @@ const CARD_DATA = [
     { id:15, name: "Dark shadow", rarity:"Legendary" ,price:95 , image: "images/darkman.png" , description:"Steps between dimensions takes souls"}
 ];
 
+CARD_DATA={id,name,rarity,image,description}.filter(price<30);
+
+
+
+
+
+
+
+
+
+
 const getStorage = (key) => JSON.parse(localStorage.getItem(key)) || [];
 const setStorage = (key, data) => localStorage.setItem(key, JSON.stringify(data));
 const findCard = (id) => CARD_DATA.find(card => card.id === parseInt(id));
@@ -361,3 +372,13 @@ if (mobileMenuButton && mobileMenu) {
 }
 
 
+
+function morethan(){
+const cardsprice = document.querySelector('div')
+console.log(cardsprice+"cardprice");
+cardsprice.filteredCards
+
+
+}
+
+morethan();
